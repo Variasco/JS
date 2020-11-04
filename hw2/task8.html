@@ -1,11 +1,23 @@
 <script>
     var a = +prompt("Введите число для возведения его в степень");
-    var b = +prompt("Введите значение степени"); //отрицательная степень не будет работать
+    var b = +prompt("Введите значение степени");
     function power(val, pow) {
-        if (pow !== 1) {
-            return val *= power(val, pow - 1);
-        } else {
-            return val;
+        if (pow === 0) {
+            return val = 1;
+        }
+        if (pow < 0) {
+            if (pow !== -1) {
+                return val *= power(val, pow + 1);
+            } else {
+                return 1/val;
+            }
+        }
+        if (pow > 0) {
+            if (pow !== 1) {
+                return val *= power(val, pow - 1);
+            } else {
+                return val;
+            }
         }
     }
     alert(power (a, b));
