@@ -1,0 +1,16 @@
+<script>
+    // Задание 1. Вывод простых чисел от 0 до 100
+    document.write('2 ');
+    for (var i = 3; i <= 100; i++) {
+        for (var j = 2; j < i; j++) {
+            if (i % j === 0) {
+                break;
+            }
+            else if (i % j !== 0) {
+                if (j === i - 1) {
+                    document.write(i + ' ');
+                }
+            }
+        }
+    }
+</script>
