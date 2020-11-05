@@ -1,0 +1,27 @@
+<script>
+    if (null == 0) {
+        alert ("null равен 0");
+    }
+    else if (null > 0) {
+        alert ("null больше 0");
+    }
+    else if (null < 0) {
+        alert ("null меньше 0");
+    }
+    else {
+        alert("Эта ветка вообще не должна сработать, но пусть будет"); //"неожиданный результат)
+    }
+    // null не является числом, поэтому его нельзя сравнить с 0.
+
+    if (null == undefined) {
+        alert ("true"); // true
+    } else {
+        alert ("false");
+    }
+    if (null === undefined) {
+        alert("true");
+    } else {
+        alert("false"); // false
+    }
+    // null это не undefined. Переменная с null определена, но не имеет никакого значения. 0 это значение. null - нет.
+</script>

@@ -1,0 +1,42 @@
+<script>
+    // Задание 5.
+    function sum (x, y) {
+        return x + y;
+    }
+
+    function sub (x, y) {
+        return x - y;
+    }
+
+    function multi (x, y) {
+        return x * y;
+    }
+
+    function div (x, y) {
+        return x / y;
+    }
+
+    // Задание 6.
+    var a = +prompt("Введите значение 'a'");
+    var b = +prompt("Введите значение 'b'");
+    var opertn = prompt("Задайте математическую операцию (sum, sub, multi, div)")
+    function mathOperation (arg1, arg2, operation) {
+        switch (operation) {
+            case 'sum':
+                alert (sum(arg1,arg2));
+                break;
+            case 'sub':
+                alert (sub(arg1,arg2));
+                break;
+            case 'multi':
+                alert (multi(arg1,arg2));
+                break;
+            case 'div':
+                alert (div(arg1,arg2));
+                break;
+            default:
+                alert ("Введите корректную операцию")
+        }
+    }
+    mathOperation(a,b,opertn);
+</script>
