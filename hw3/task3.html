@@ -1,0 +1,25 @@
+<script>
+    //Задание 3. Функция для подсчета стоимости корзины
+    var cart = [
+        {
+            title: "Товар 1",
+            price: 100
+        },
+        {
+            title: "Товар 2",
+            price: 200
+        },
+        {
+            title: "Товар 3",
+            price: 300
+        }
+    ]
+    function countBasketPrice () {
+        var sum = 0;
+        for (product of cart) {
+            sum += product.price;
+        }
+        return sum;
+    }
+    alert (countBasketPrice());
+</script>

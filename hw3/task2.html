@@ -1,0 +1,22 @@
+<script>
+    // Задание 2. Подсчет стоимости товаров корзины
+    var cart = [
+        {
+            title: "Товар 1",
+            price: 100
+        },
+        {
+            title: "Товар 2",
+            price: 200
+        },
+        {
+            title: "Товар 3",
+            price: 300
+        }
+    ]
+    var sum = 0;
+    for (product of cart) {
+        sum += product.price;
+    }
+    alert("Сумма товаров корзины " + sum);
+</script>
