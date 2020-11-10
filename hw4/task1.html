@@ -1,0 +1,35 @@
+<script>
+    // Задание 1. Функция преобразующая число в объект
+    var getNumber;
+    var permission = false;
+
+    function numToObj(number) {
+        var mas = number.split("");
+        var obj = {};
+        switch (mas.length) {
+            case 3:
+                obj.sot = mas[(mas.length - 3)];
+            case 2:
+                obj.des = mas[(mas.length - 2)];
+            case 1:
+                obj.ed = mas[(mas.length - 1)];
+                break;
+            default:
+                console.log ('Число не входит в допустимый диапазон');
+                return obj = null;
+        }
+        return obj;
+    }
+
+    //Ввод данных и проверка на число
+    do {
+        getNumber = prompt('Введите число от 0 до 999', 0);
+        if (isNaN(getNumber)) {
+            alert('Вы ввели не число. Попробуйте ещё раз');
+        }
+        else {
+            permission = true;
+        }
+    } while (!permission);
+    console.log(numToObj(getNumber));
+</script>
