@@ -1,0 +1,59 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  color: $colorMain;
+}
+
+.outerBox {
+  background-color: #222;
+  margin: 10px auto 0;
+  width: 10*$x;
+  display: grid;
+  grid-template-columns: repeat(10, $x);
+  grid-template-rows: repeat(10, $y);
+}
+
+.innerBox {
+  grid-column: 2/10;
+  grid-row: 2/10;
+  background-color: $colorBlack;
+  display: flex;
+  flex-direction: column;
+}
+
+.unitBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.row {
+  display: flex;
+  height: $y;
+}
+
+.column {
+  width: $x;
+  font-size: 0.9*$x;
+  line-height: $x;
+  text-align: center;
+
+  &_white {
+    background-color: white;
+  }
+
+  &_black {
+    background-color: $colorBlack;
+  }
+}

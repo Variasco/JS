@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  color: red;
+}
+
+.outerBox {
+  background-color: #222;
+  margin: 10px auto 0;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+}
+
+.innerBox {
+  grid-column: 2/10;
+  grid-row: 2/10;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.unitBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.unitBox_rotate {
+  transform: rotate(180deg);
+}
+
+.row {
+  display: flex;
+  height: 50px;
+}
+
+.column {
+  width: 50px;
+  font-size: 45px;
+  line-height: 50px;
+  text-align: center;
+}
+.column_white {
+  background-color: white;
+}
+.column_black {
+  background-color: #333;
+}
+
+/*# sourceMappingURL=style.css.map */
