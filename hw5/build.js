@@ -23,9 +23,9 @@ function buildChess () {
                     column.classList.add("column_white");
                 }
             }
-            column.id = setId(j, i);
+            column.id = setId(j, i); // Присваивает каждой клетке id, например "8A, 3D"
             if (i === 0 || i === 1 || i === 6 || i === 7) {
-                column.innerHTML = getFigure(j, i);
+                column.innerHTML = getFigure(j, i); // Расставляет фигуры по местам
             }
             row.append(column);
         }
@@ -34,32 +34,6 @@ function buildChess () {
 
 function setId (x, y) {
     var str = "";
-    switch (y) {
-        case 0:
-            str += "8";
-            break;
-        case 1:
-            str += "7";
-            break;
-        case 2:
-            str += "6";
-            break;
-        case 3:
-            str += "5";
-            break;
-        case 4:
-            str += "4";
-            break;
-        case 5:
-            str += "3";
-            break;
-        case 6:
-            str += "2";
-            break;
-        case 7:
-            str += "1";
-            break;
-    }
     switch (x) {
         case 0:
             str += "A";
@@ -84,6 +58,32 @@ function setId (x, y) {
             break;
         case 7:
             str += "H";
+            break;
+    }
+    switch (y) {
+        case 0:
+            str += "8";
+            break;
+        case 1:
+            str += "7";
+            break;
+        case 2:
+            str += "6";
+            break;
+        case 3:
+            str += "5";
+            break;
+        case 4:
+            str += "4";
+            break;
+        case 5:
+            str += "3";
+            break;
+        case 6:
+            str += "2";
+            break;
+        case 7:
+            str += "1";
             break;
     }
     return str;
