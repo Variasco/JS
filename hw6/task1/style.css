@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 1240px;
+}
+
+.large {
+  width: 1024px;
+}
